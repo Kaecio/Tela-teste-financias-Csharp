@@ -21,12 +21,28 @@ namespace NewScreenFinance
 
         private void Form1_Load(object sender, EventArgs e)
         {
+         
 
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void guna2TextBox1_Click(object sender, EventArgs e)
         {
+            fltBuscaFinancas.Text="";
+        }
 
+        private void fltBuscaFinancas_MouseClick(object sender, MouseEventArgs e)
+        {
+            fltBuscaFinancas.Text = "";
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            Form2 lancamento = new Form2();
+            lancamento.ShowDialog();
+        }
+
+        private void cbxCartoes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxCartoes.SelectedItem = "Cartões";
         }
     }
 }
