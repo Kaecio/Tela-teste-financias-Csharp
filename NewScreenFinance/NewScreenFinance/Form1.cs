@@ -100,14 +100,19 @@ namespace NewScreenFinance
         }
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            Form2 cadastro = new Form2();
+            Lancamento cadastro = new Lancamento();
             cadastro.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form2 lancamento = new Form2();
+            Lancamento lancamento = new Lancamento();
             lancamento.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

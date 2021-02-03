@@ -162,8 +162,7 @@ C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewS
 C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\obj\Debug\NewScreenFinance.csproj.CopyComplete
 C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\obj\Debug\NewScreenFinance.exe
 C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\obj\Debug\NewScreenFinance.pdb
-C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\obj\Debug\NewScreenFinance.Form2.resources
-C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\obj\Debug\NewScreenFinance.Form3.resources
 C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\bin\Debug\Bunifu.Dataviz.WinForms.dll
 C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\bin\Debug\Guna.UI2.dll
 C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\bin\Debug\Bunifu.Dataviz.WinForms.xml
+C:\Users\kaeci\OneDrive\Documentos\exercicos C#\Tela-teste-financias-Csharp\NewScreenFinance\NewScreenFinance\obj\Debug\NewScreenFinance.Lancamento.resources

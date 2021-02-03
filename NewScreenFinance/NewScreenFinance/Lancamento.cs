@@ -16,5 +16,10 @@ namespace NewScreenFinance
         {
             InitializeComponent();
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
