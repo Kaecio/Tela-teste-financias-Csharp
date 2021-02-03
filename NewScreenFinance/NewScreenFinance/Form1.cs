@@ -113,6 +113,12 @@ namespace NewScreenFinance
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Close();
+            
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            //frmFinances.WindowState = FormWindowState.Minimized;
         }
     }
 }

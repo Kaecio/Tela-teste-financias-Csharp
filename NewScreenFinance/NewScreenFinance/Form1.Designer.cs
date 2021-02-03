@@ -85,6 +85,11 @@ namespace NewScreenFinance
             this.clConta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clResponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -95,6 +100,8 @@ namespace NewScreenFinance
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvLancamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -111,11 +118,11 @@ namespace NewScreenFinance
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(333, 98);
+            this.label1.Location = new System.Drawing.Point(540, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 24);
+            this.label1.Size = new System.Drawing.Size(154, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "Lançamentos";
             // 
@@ -124,9 +131,9 @@ namespace NewScreenFinance
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(473, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(409, 110);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -194,6 +201,7 @@ namespace NewScreenFinance
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(30, 30);
             this.guna2Button3.TabIndex = 0;
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button1
             // 
@@ -237,7 +245,7 @@ namespace NewScreenFinance
             this.fltBuscaFinancas.IconRight = ((System.Drawing.Image)(resources.GetObject("fltBuscaFinancas.IconRight")));
             this.fltBuscaFinancas.IconRightOffset = new System.Drawing.Point(5, 0);
             this.fltBuscaFinancas.IconRightSize = new System.Drawing.Size(30, 30);
-            this.fltBuscaFinancas.Location = new System.Drawing.Point(337, 153);
+            this.fltBuscaFinancas.Location = new System.Drawing.Point(337, 157);
             this.fltBuscaFinancas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fltBuscaFinancas.Name = "fltBuscaFinancas";
             this.fltBuscaFinancas.PasswordChar = '\0';
@@ -266,7 +274,7 @@ namespace NewScreenFinance
             this.cbxCartoes.HoverState.Parent = this.cbxCartoes;
             this.cbxCartoes.ItemHeight = 30;
             this.cbxCartoes.ItemsAppearance.Parent = this.cbxCartoes;
-            this.cbxCartoes.Location = new System.Drawing.Point(957, 84);
+            this.cbxCartoes.Location = new System.Drawing.Point(961, 110);
             this.cbxCartoes.Name = "cbxCartoes";
             this.cbxCartoes.ShadowDecoration.Parent = this.cbxCartoes;
             this.cbxCartoes.Size = new System.Drawing.Size(140, 36);
@@ -333,7 +341,7 @@ namespace NewScreenFinance
             this.guna2Panel1.Controls.Add(this.guna2ImageCheckBox3);
             this.guna2Panel1.Controls.Add(this.guna2ImageCheckBox2);
             this.guna2Panel1.Controls.Add(this.guna2ImageCheckBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 211);
+            this.guna2Panel1.Location = new System.Drawing.Point(12, 220);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
@@ -553,7 +561,7 @@ namespace NewScreenFinance
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.guna2DateTimePicker2);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(25, 137);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(25, 146);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowPanel1.ShadowDepth = 20;
@@ -586,12 +594,12 @@ namespace NewScreenFinance
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(622, 84);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(756, 110);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(247, 36);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(173, 36);
             this.guna2DateTimePicker1.TabIndex = 26;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 2, 1, 14, 21, 3, 206);
             // 
@@ -691,7 +699,7 @@ namespace NewScreenFinance
             this.grvLancamento.DefaultCellStyle = dataGridViewCellStyle7;
             this.grvLancamento.EnableHeadersVisualStyles = false;
             this.grvLancamento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.grvLancamento.Location = new System.Drawing.Point(337, 211);
+            this.grvLancamento.Location = new System.Drawing.Point(337, 220);
             this.grvLancamento.Name = "grvLancamento";
             this.grvLancamento.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -705,7 +713,7 @@ namespace NewScreenFinance
             this.grvLancamento.RowHeadersVisible = false;
             this.grvLancamento.RowTemplate.Height = 50;
             this.grvLancamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvLancamento.Size = new System.Drawing.Size(712, 364);
+            this.grvLancamento.Size = new System.Drawing.Size(712, 341);
             this.grvLancamento.TabIndex = 46;
             this.grvLancamento.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.grvLancamento.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -766,11 +774,70 @@ namespace NewScreenFinance
             this.clValor.Name = "clValor";
             this.clValor.ReadOnly = true;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(533, 110);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 47;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(690, 110);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 48;
+            this.pictureBox8.TabStop = false;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(343, 121);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(57, 18);
+            this.guna2HtmlLabel7.TabIndex = 49;
+            this.guna2HtmlLabel7.Text = "Estrada";
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(477, 121);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(44, 18);
+            this.guna2HtmlLabel8.TabIndex = 50;
+            this.guna2HtmlLabel8.Text = "Saída";
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(595, 121);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(86, 18);
+            this.guna2HtmlLabel9.TabIndex = 51;
+            this.guna2HtmlLabel9.Text = "Tanferencia";
+            // 
             // frmFinances
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 700);
+            this.Controls.Add(this.guna2HtmlLabel9);
+            this.Controls.Add(this.guna2HtmlLabel8);
+            this.Controls.Add(this.guna2HtmlLabel7);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.grvLancamento);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -804,6 +871,8 @@ namespace NewScreenFinance
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grvLancamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -860,6 +929,11 @@ namespace NewScreenFinance
         private System.Windows.Forms.DataGridViewTextBoxColumn clConta;
         private System.Windows.Forms.DataGridViewTextBoxColumn clResponsavel;
         private System.Windows.Forms.DataGridViewTextBoxColumn clValor;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
     }
 }
 

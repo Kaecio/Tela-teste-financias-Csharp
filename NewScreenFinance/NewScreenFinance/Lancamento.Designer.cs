@@ -44,11 +44,12 @@ namespace NewScreenFinance
             this.txCategoria = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtConta = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtResponsavel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtValor = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +107,7 @@ namespace NewScreenFinance
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(30, 30);
             this.guna2Button5.TabIndex = 4;
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button6
             // 
@@ -185,7 +187,7 @@ namespace NewScreenFinance
             this.txtData.BackColor = System.Drawing.Color.Transparent;
             this.txtData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtData.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtData.Location = new System.Drawing.Point(43, 113);
+            this.txtData.Location = new System.Drawing.Point(32, 113);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(47, 22);
             this.txtData.TabIndex = 17;
@@ -222,7 +224,7 @@ namespace NewScreenFinance
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(144, 99);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(133, 99);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -236,7 +238,7 @@ namespace NewScreenFinance
             this.txtDescricao.BackColor = System.Drawing.Color.Transparent;
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtDescricao.Location = new System.Drawing.Point(97, 232);
+            this.txtDescricao.Location = new System.Drawing.Point(86, 232);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(88, 22);
             this.txtDescricao.TabIndex = 20;
@@ -247,7 +249,7 @@ namespace NewScreenFinance
             this.txCategoria.BackColor = System.Drawing.Color.Transparent;
             this.txCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txCategoria.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txCategoria.Location = new System.Drawing.Point(412, 113);
+            this.txCategoria.Location = new System.Drawing.Point(414, 180);
             this.txCategoria.Name = "txCategoria";
             this.txCategoria.Size = new System.Drawing.Size(86, 22);
             this.txCategoria.TabIndex = 21;
@@ -258,7 +260,7 @@ namespace NewScreenFinance
             this.txtConta.BackColor = System.Drawing.Color.Transparent;
             this.txtConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConta.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtConta.Location = new System.Drawing.Point(43, 180);
+            this.txtConta.Location = new System.Drawing.Point(32, 180);
             this.txtConta.Name = "txtConta";
             this.txtConta.Size = new System.Drawing.Size(56, 22);
             this.txtConta.TabIndex = 22;
@@ -269,34 +271,11 @@ namespace NewScreenFinance
             this.txtResponsavel.BackColor = System.Drawing.Color.Transparent;
             this.txtResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResponsavel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtResponsavel.Location = new System.Drawing.Point(412, 180);
+            this.txtResponsavel.Location = new System.Drawing.Point(414, 113);
             this.txtResponsavel.Name = "txtResponsavel";
             this.txtResponsavel.Size = new System.Drawing.Size(111, 22);
             this.txtResponsavel.TabIndex = 23;
             this.txtResponsavel.Text = "Responsável:";
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(159, 166);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(239, 36);
-            this.guna2TextBox3.TabIndex = 25;
             // 
             // guna2TextBox4
             // 
@@ -312,7 +291,7 @@ namespace NewScreenFinance
             this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(531, 166);
+            this.guna2TextBox4.Location = new System.Drawing.Point(533, 99);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
@@ -368,22 +347,61 @@ namespace NewScreenFinance
             this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.ItemHeight = 30;
             this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(531, 99);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(533, 166);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(204, 36);
             this.guna2ComboBox1.TabIndex = 29;
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
+            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
+            this.guna2Button7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Button7.FillColor = System.Drawing.Color.DodgerBlue;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button7.ForeColor = System.Drawing.Color.White;
+            this.guna2Button7.HoverState.Parent = this.guna2Button7;
+            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
+            this.guna2Button7.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button7.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button7.Location = new System.Drawing.Point(0, 520);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
+            this.guna2Button7.Size = new System.Drawing.Size(771, 45);
+            this.guna2Button7.TabIndex = 30;
+            this.guna2Button7.Text = "Salvar";
+            // 
+            // guna2ComboBox2
+            // 
+            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.FocusedState.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox2.HoverState.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.ItemHeight = 30;
+            this.guna2ComboBox2.ItemsAppearance.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.Location = new System.Drawing.Point(133, 166);
+            this.guna2ComboBox2.Name = "guna2ComboBox2";
+            this.guna2ComboBox2.ShadowDecoration.Parent = this.guna2ComboBox2;
+            this.guna2ComboBox2.Size = new System.Drawing.Size(254, 36);
+            this.guna2ComboBox2.TabIndex = 31;
             // 
             // Lancamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 565);
+            this.Controls.Add(this.guna2ComboBox2);
+            this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2TextBox5);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.guna2TextBox4);
-            this.Controls.Add(this.guna2TextBox3);
             this.Controls.Add(this.txtResponsavel);
             this.Controls.Add(this.txtConta);
             this.Controls.Add(this.txCategoria);
@@ -397,6 +415,7 @@ namespace NewScreenFinance
             this.Name = "Lancamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lancamento";
+            this.Load += new System.EventHandler(this.Lancamento_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -419,10 +438,11 @@ namespace NewScreenFinance
         private Guna.UI2.WinForms.Guna2HtmlLabel txCategoria;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtConta;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtResponsavel;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2HtmlLabel txtValor;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
     }
 }
