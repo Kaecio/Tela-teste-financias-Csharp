@@ -31,12 +31,18 @@ namespace NewScreenFinance
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFinances));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.fltBuscaFinancas = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbxCartoes = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -72,8 +78,13 @@ namespace NewScreenFinance
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.grvLancamento = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.clData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clConta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clResponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -83,6 +94,7 @@ namespace NewScreenFinance
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLancamento)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -146,6 +158,42 @@ namespace NewScreenFinance
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1187, 66);
             this.guna2CustomGradientPanel1.TabIndex = 15;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 2;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
+            this.guna2Button2.Location = new System.Drawing.Point(1119, 9);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(30, 30);
+            this.guna2Button2.TabIndex = 3;
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.Animated = true;
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderRadius = 2;
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
+            this.guna2Button3.Location = new System.Drawing.Point(1083, 9);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(30, 30);
+            this.guna2Button3.TabIndex = 0;
             // 
             // guna2Button1
             // 
@@ -605,47 +653,124 @@ namespace NewScreenFinance
             this.label11.TabIndex = 45;
             this.label11.Text = "previsto";
             // 
-            // guna2Button3
+            // grvLancamento
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 2;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.Location = new System.Drawing.Point(1083, 9);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(30, 30);
-            this.guna2Button3.TabIndex = 0;
+            this.grvLancamento.AllowUserToAddRows = false;
+            this.grvLancamento.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grvLancamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grvLancamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grvLancamento.BackgroundColor = System.Drawing.Color.White;
+            this.grvLancamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grvLancamento.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grvLancamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvLancamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grvLancamento.ColumnHeadersHeight = 40;
+            this.grvLancamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clData,
+            this.clDescricao,
+            this.clCategoria,
+            this.clConta,
+            this.clResponsavel,
+            this.clValor});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvLancamento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grvLancamento.EnableHeadersVisualStyles = false;
+            this.grvLancamento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grvLancamento.Location = new System.Drawing.Point(337, 211);
+            this.grvLancamento.Name = "grvLancamento";
+            this.grvLancamento.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvLancamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grvLancamento.RowHeadersVisible = false;
+            this.grvLancamento.RowTemplate.Height = 50;
+            this.grvLancamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grvLancamento.Size = new System.Drawing.Size(712, 364);
+            this.grvLancamento.TabIndex = 46;
+            this.grvLancamento.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.grvLancamento.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.grvLancamento.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.grvLancamento.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.grvLancamento.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.grvLancamento.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.grvLancamento.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.grvLancamento.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grvLancamento.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.grvLancamento.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grvLancamento.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grvLancamento.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.grvLancamento.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.grvLancamento.ThemeStyle.HeaderStyle.Height = 40;
+            this.grvLancamento.ThemeStyle.ReadOnly = true;
+            this.grvLancamento.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.grvLancamento.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grvLancamento.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.grvLancamento.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.grvLancamento.ThemeStyle.RowsStyle.Height = 50;
+            this.grvLancamento.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.grvLancamento.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // guna2Button2
+            // clData
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 2;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.Location = new System.Drawing.Point(1119, 9);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(30, 30);
-            this.guna2Button2.TabIndex = 3;
+            this.clData.HeaderText = "Data";
+            this.clData.Name = "clData";
+            this.clData.ReadOnly = true;
+            // 
+            // clDescricao
+            // 
+            this.clDescricao.HeaderText = "Descrição";
+            this.clDescricao.Name = "clDescricao";
+            this.clDescricao.ReadOnly = true;
+            // 
+            // clCategoria
+            // 
+            this.clCategoria.HeaderText = "Categoria";
+            this.clCategoria.Name = "clCategoria";
+            this.clCategoria.ReadOnly = true;
+            // 
+            // clConta
+            // 
+            this.clConta.HeaderText = "Conta";
+            this.clConta.Name = "clConta";
+            this.clConta.ReadOnly = true;
+            // 
+            // clResponsavel
+            // 
+            this.clResponsavel.HeaderText = "Responsável";
+            this.clResponsavel.Name = "clResponsavel";
+            this.clResponsavel.ReadOnly = true;
+            // 
+            // clValor
+            // 
+            this.clValor.HeaderText = "Valor";
+            this.clValor.Name = "clValor";
+            this.clValor.ReadOnly = true;
             // 
             // frmFinances
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 700);
+            this.Controls.Add(this.grvLancamento);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.guna2HtmlLabel5);
@@ -677,6 +802,7 @@ namespace NewScreenFinance
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grvLancamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -726,6 +852,13 @@ namespace NewScreenFinance
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2DataGridView grvLancamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clConta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clResponsavel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clValor;
     }
 }
 
