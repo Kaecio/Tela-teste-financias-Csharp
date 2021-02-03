@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace NewScreenFinance
 {
-    public partial class Form3 : Form
+    public partial class Lancamento : Form
     {
-        public Form3()
+        public Lancamento()
         {
             InitializeComponent();
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
